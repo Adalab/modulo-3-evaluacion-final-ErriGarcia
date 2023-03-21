@@ -1,7 +1,21 @@
-import '../styles/App.scss';
+import { useState, useEffect } from 'react'
+import callToApi from '../services/api'
+import '../styles/App.scss'
 
 function App() {
-  return <div className="App">{/* Aquí va el HTML */}</div>;
+  const [data, setData] = useState({})
+
+  useEffect(() => {
+    callToApi().then((cleanData) => {
+      setData(cleanData)
+    })
+  }, [])
+
+  return (
+    <div className="App">
+    
+    </div>
+  )
 }
 
 export default App;
