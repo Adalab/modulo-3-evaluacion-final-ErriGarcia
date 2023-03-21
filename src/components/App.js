@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import callToApi from '../services/api'
 import '../styles/App.scss'
-import CharacterList from './CharacterList'
-import Filters from './Filters'
+import CharacterList from './List/CharacterList'
+import Filters from './Filters/Filters'
 
 
 function App() {
   const [characters, setCharacters] = useState([])
+  const [nameFilter, setNameFilter] = useState('')
 
   useEffect(() => {
     callToApi().then((cleanData) => {
@@ -14,10 +15,28 @@ function App() {
     })
   }, [])
 
+  const filteredCharacters = characters
+    .filter(eachCharacter => {
+      return eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
+    })
+
+  const handleInputName = (value) => {
+    setNameFilter(value)
+  }
+
   return (
     <div className="App">
-      <Filters></Filters>
-      <CharacterList characters={characters}></CharacterList>
+      <main>
+        <Filters
+          handleInputName={handleInputName}
+          nameFilter={nameFilter}
+        >
+        </Filters>
+        <CharacterList 
+          filteredCharacters={filteredCharacters}
+        >
+        </CharacterList>
+      </main>
     </div>
   )
 }
