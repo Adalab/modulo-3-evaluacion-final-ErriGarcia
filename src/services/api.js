@@ -3,7 +3,6 @@ const callToApi = (houseFilter) => {
     return fetch(urlApi)
         .then(response => response.json())
         .then(response => {
-                console.log(urlApi)
             const cleanData = response.map(eachCharacter => {
                 return {
                     id: eachCharacter.id,
