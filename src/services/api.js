@@ -1,8 +1,9 @@
-const callToApi = () => {
-    const urlApi = 'https://hp-api.onrender.com/api/characters/house/gryffindor'
+const callToApi = (houseFilter) => {
+    const urlApi = `https://hp-api.onrender.com/api/characters/house/${houseFilter}`
     return fetch(urlApi)
         .then(response => response.json())
         .then(response => {
+                console.log(urlApi)
             const cleanData = response.map(eachCharacter => {
                 return {
                     id: eachCharacter.id,

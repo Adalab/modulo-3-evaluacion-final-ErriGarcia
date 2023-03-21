@@ -1,16 +1,18 @@
 import FilterName from './FilterName'
 import FilterHouse from './FilterHouse'
 
-const Filters = ({handleInputName, nameFilter}) => {
+const Filters = ({handleInputName, nameFilter, handleSelectHouse,houseFilter}) => {
     return (
         <section>
             <form>
                 <FilterName 
                     handleInputName={handleInputName}
-                    nameFilter={nameFilter}
-                >
+                    nameFilter={nameFilter}>
                 </FilterName>
-                <FilterHouse></FilterHouse>
+                <FilterHouse
+                    handleSelectHouse={handleSelectHouse}
+                    houseFilter={houseFilter}>
+                </FilterHouse>
             </form>
         </section>
     )
