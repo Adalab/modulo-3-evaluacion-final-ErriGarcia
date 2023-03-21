@@ -3,7 +3,7 @@ import callToApi from '../services/api'
 import '../styles/App.scss'
 import CharacterList from './List/CharacterList'
 import Filters from './Filters/Filters'
-import { Route, Routes, useLocation, matchPath } from 'react-router'
+import { Route, Routes } from 'react-router'
 import CharacterDetail from './CharacterDetail'
 
 
@@ -45,17 +45,6 @@ function App() {
     setHouseFilter(value)
   }
 
-  // useLocation
-  const { pathname } = useLocation()
-  console.log(pathname, 'pathname')
-
-  const routeData = matchPath('/character/:characterId', pathname)
-
-  console.log(routeData, 'routeData')
-  const characterId = routeData !== null ? routeData.params.characterId : ''
-  const foundCharacter = characters.find(eachCharacter => {
-    return eachCharacter.id === parseInt(characterId)
-  })
 
   return (
     <div className='App'>
@@ -78,9 +67,7 @@ function App() {
           </Route>
           <Route path='/character/:characterId' 
             element={
-            <CharacterDetail 
-              foundCharacter={foundCharacter}>
-            </CharacterDetail>}>
+            <CharacterDetail characters={characters}></CharacterDetail>}>
             </Route>
         </Routes>
       </main>
