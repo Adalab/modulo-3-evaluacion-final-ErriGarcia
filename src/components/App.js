@@ -16,6 +16,7 @@ function App() {
   const [characters, setCharacters] = useState([])
   const [nameFilter, setNameFilter] = useState('')
   const [houseFilter, setHouseFilter] = useState('Gryffindor')
+  const [genderFilter, setGenderFilter] = useState('all')
 
 
   // useEffect
@@ -26,12 +27,16 @@ function App() {
   }, [houseFilter])
 
 
+
   // filtered characters by name
   let filteredCharacters = characters
     .filter(eachCharacter => {
       return eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
     })
     .sort((a, b) => a.name.localeCompare(b.name))
+    .filter(eachCharacter => {
+      return genderFilter === 'all' ? true : eachCharacter.gender === genderFilter
+    })
 
 
   // function to set name searched by user
@@ -43,6 +48,11 @@ function App() {
   // function to set house searched by user
   const handleSelectHouse = (value) => {
     setHouseFilter(value)
+  }
+
+  // function to set gender search by user
+  const handleInputGender = (value) => {
+    setGenderFilter(value)
   }
 
   // function to reset form
@@ -64,6 +74,8 @@ function App() {
                 nameFilter={nameFilter}
                 handleSelectHouse={handleSelectHouse}
                 houseFilter={houseFilter}
+                handleInputGender={handleInputGender}
+                genderFilter={genderFilter}
                 handleReset={handleReset}>
                 </Filters>
                 <CharacterList 
@@ -75,7 +87,7 @@ function App() {
           <Route path='/character/:characterId' 
             element={
             <CharacterDetail characters={characters}></CharacterDetail>}>
-            </Route>
+          </Route>
         </Routes>
       </main>
     </div>

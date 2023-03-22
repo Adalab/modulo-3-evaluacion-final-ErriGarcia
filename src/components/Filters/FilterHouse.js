@@ -5,20 +5,22 @@ const FilterHouse = ({handleSelectHouse, houseFilter}) => {
 
     return (
         <fieldset>
-            <label htmlFor="house">
+            <legend>
                 Selecciona la casa:
+            </legend>
+            <label htmlFor="house">
+                <select 
+                name="house" 
+                id="house"
+                onChange={handleInput}
+                value={houseFilter}>
+                    <option value="Elige la casa" disabled>Elige la casa</option>
+                    <option value="gryffindor">Gryffindor</option>
+                    <option value="hufflepuff">Hufflepuff</option>
+                    <option value="ravenclaw">Ravenclaw</option>
+                    <option value="slytherin">Slytherin</option>
+                </select>
             </label>
-            <select 
-            name="house" 
-            id="house"
-            onChange={handleInput}
-            value={houseFilter}>
-                <option value="Elige la casa" disabled>Elige la casa</option>
-                <option value="gryffindor">Gryffindor</option>
-                <option value="hufflepuff">Hufflepuff</option>
-                <option value="ravenclaw">Ravenclaw</option>
-                <option value="slytherin">Slytherin</option>
-            </select>
         </fieldset>
     )
 }

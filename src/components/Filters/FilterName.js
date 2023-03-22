@@ -4,18 +4,19 @@ const FilterName = ({handleInputName, nameFilter}) => {
     }
     return (
         <fieldset>
-            <label htmlFor="name">
+            <legend>
                 Busca por personaje:
-            </label>
-            <input 
+            </legend>
+            <label htmlFor="name">
+                <input 
                 type="text" 
                 id="name" 
                 name="name"
                 placeholder="ej: Harry Potter"
-                onChange={handleInput}
                 value={nameFilter}
-            >
-            </input>
+                onChange={handleInput}>
+                </input>
+            </label>
         </fieldset>
     )
 }
