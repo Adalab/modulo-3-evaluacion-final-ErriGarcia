@@ -1,6 +1,7 @@
 import FilterName from './FilterName'
 import FilterHouse from './FilterHouse'
 import FilterGender from './FilterGender'
+import '../../styles/components/Filters/Filters.scss'
 
 const Filters = ({handleInputName, nameFilter, handleSelectHouse, houseFilter, handleInputGender, genderFilter, handleReset}) => {
 
@@ -9,8 +10,8 @@ const Filters = ({handleInputName, nameFilter, handleSelectHouse, houseFilter, h
     }
 
     return (
-        <section>
-            <form onSubmit={handleSubmit}>
+        <section className='section-search'>
+            <form className='section-search-form' onSubmit={handleSubmit}>
 
                 <FilterName 
                     handleInputName={handleInputName}
@@ -27,7 +28,7 @@ const Filters = ({handleInputName, nameFilter, handleSelectHouse, houseFilter, h
                     genderFilter={genderFilter}>
                 </FilterGender>
 
-                <button onClick={handleReset}>Reset</button>
+                <button className='reset-button' onClick={handleReset}>Reset</button>
             </form>
         </section>
     )

@@ -1,0 +1,25 @@
+@import '../../core/variables';
+
+.section-search {
+    margin-top: 2.8rem;
+    background-color: $color-dark-violet;
+    color: $color-white;
+    padding: 1rem;
+    border-radius: 12px;
+    font-family: $font-Inter;
+}
+.reset-button {
+    text-decoration: none;
+    background-color: $color-white;
+    border: none;
+    margin-top: 1.5rem;
+    width: 25%;
+    border-radius: 0.5rem;
+    color: #777676;
+    transition: all .5s ease-in;
+    &:hover {
+        background-color: $color-violet;
+        color: $color-white;
+        transition: all .5s ease-out;
+    }
+}

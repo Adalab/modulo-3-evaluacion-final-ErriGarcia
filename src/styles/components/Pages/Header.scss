@@ -1,0 +1,25 @@
+@import '../../core/variables';
+
+.header {
+    &-nav-header {
+    margin-top: 2rem;
+    &-link {
+        display: flex;
+        justify-content: center;
+        &-image {
+            width: 15rem;
+        }
+    }
+}
+    &-title {
+        margin-top: 2rem;
+        color: $color-white;
+        font-family: $font-Bluu-Next;
+        font-size: 1.75rem;
+        text-align: center;
+        line-height: 2rem;
+        &-span {
+            color: $color-violet;
+        }
+    }
+}
