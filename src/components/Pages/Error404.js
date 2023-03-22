@@ -8,7 +8,7 @@ const Error404 = () => {
         <section className='section-error-404'>
             <img className='section-error-404-image' src={error} alt="error-harry-potter" />
             <h1 className='section-error-404-title'>
-                ¡Vaya... Esta página se ha ido a buscar otros personajes que no existen!
+                ¡Vaya... He perdido la varita mágica!
             </h1>
             <p className='section-error-404-text'>
                 Error 404: Lo sentimos, no hemos podido encontrar la página que buscas

@@ -30,8 +30,7 @@ function App() {
   }, [houseFilter])
 
 
-
-  // filtered characters by name
+  // filtered characters by name and gender
   let filteredCharacters = characters
     .filter(eachCharacter => {
       return eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
@@ -68,14 +67,6 @@ function App() {
 
   return (
     <div className='App'>
-      <Routes>
-        <Route path='/character/:characterId' 
-            element={
-              <CharacterDetail characters={characters}>
-              </CharacterDetail>
-            }>
-          </Route>
-      </Routes>
       <main>
         <Routes>
           <Route path='/' 
@@ -97,6 +88,14 @@ function App() {
                 </CharacterList>
               </>
             }>
+          </Route>
+          <Route 
+              path='/character/:characterId'
+              element={
+                <CharacterDetail characters={characters}>
+                </CharacterDetail>
+              }
+          >
           </Route>
           <Route path='*' element={<Error404></Error404>}></Route>
         </Routes>

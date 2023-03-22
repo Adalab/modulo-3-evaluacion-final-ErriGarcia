@@ -40,7 +40,7 @@ const FilterGender = ({handleInputGender, genderFilter}) => {
             id='female'
             name='gender'
             value='female'
-            hecked={genderFilter === 'female'}
+            checked={genderFilter === 'female'}
             onChange={handleInput}
             className='section-search-form-fieldset-gender-radio'>
             </input>
