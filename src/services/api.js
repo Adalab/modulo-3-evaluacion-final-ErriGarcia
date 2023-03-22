@@ -11,6 +11,7 @@ const callToApi = (houseFilter) => {
                     gender: eachCharacter.gender,
                     house: eachCharacter.house,
                     alive: eachCharacter.alive,
+                    ancestry: eachCharacter.ancestry,
                     image: eachCharacter.image
                 }
             })

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 
 const CharacterCard = ({eachCharacter}) => {
 
-    {/* Ternary operator eachCharacter.image !== null ? eachCharacter.image : https://via.placeholder.com/210x295/ffffff/666666/?text={eachCharacter.name}  */ }
     return (
         <dl>
             <Link to={`/character/${eachCharacter.id}`}>

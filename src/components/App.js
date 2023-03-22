@@ -7,7 +7,6 @@ import { Route, Routes } from 'react-router'
 import CharacterDetail from './CharacterDetail'
 
 
-
 function App() {
 
   // state variables
@@ -28,10 +27,11 @@ function App() {
 
 
   // filtered characters by name
-  const filteredCharacters = characters
+  let filteredCharacters = characters
     .filter(eachCharacter => {
       return eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
     })
+    .sort((a, b) => a.name.localeCompare(b.name))
 
 
   // function to set name searched by user
@@ -43,6 +43,12 @@ function App() {
   // function to set house searched by user
   const handleSelectHouse = (value) => {
     setHouseFilter(value)
+  }
+
+  // function to reset form
+  const handleReset = () => {
+    setNameFilter('')
+    setHouseFilter('Gryffindor')
   }
 
 
@@ -57,7 +63,8 @@ function App() {
                 handleInputName={handleInputName}
                 nameFilter={nameFilter}
                 handleSelectHouse={handleSelectHouse}
-                houseFilter={houseFilter}>
+                houseFilter={houseFilter}
+                handleReset={handleReset}>
                 </Filters>
                 <CharacterList 
                 filteredCharacters={filteredCharacters}>
