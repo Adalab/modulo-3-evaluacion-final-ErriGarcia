@@ -6,7 +6,7 @@ const CharacterCard = ({eachCharacter}) => {
         <dl>
             <Link to={`/character/${eachCharacter.id}`}>
                 <img 
-                src={eachCharacter.image !== "" ? eachCharacter.image : `https://via.placeholder.com/210x295/E5C07B/666666/?text=${eachCharacter.name}`} 
+                src={eachCharacter.image !== '' ? eachCharacter.image : `https://via.placeholder.com/210x295/E5C07B/666666/?text=${eachCharacter.name}`} 
                 alt={`character: ${eachCharacter.name}`}
                 />
                 <dt>

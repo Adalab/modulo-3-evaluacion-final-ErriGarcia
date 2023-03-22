@@ -4,7 +4,8 @@ import '../styles/App.scss'
 import CharacterList from './List/CharacterList'
 import Filters from './Filters/Filters'
 import { Route, Routes } from 'react-router'
-import CharacterDetail from './CharacterDetail'
+import CharacterDetail from './Pages/CharacterDetail'
+import Error404 from './Pages/Error404'
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
     <div className='App'>
       <main>
         <Routes>
+
           <Route path='/' 
             element={
               <>
@@ -84,10 +86,18 @@ function App() {
               </>
             }>
           </Route>
+
           <Route path='/character/:characterId' 
             element={
-            <CharacterDetail characters={characters}></CharacterDetail>}>
+              <CharacterDetail characters={characters}>
+              </CharacterDetail>
+            }>
           </Route>
+
+          <Route path='*' 
+          element={<Error404></Error404>}>
+          </Route>
+
         </Routes>
       </main>
     </div>

@@ -7,12 +7,12 @@ const CharacterDetail = ({characters}) => {
     console.log(characterSelected)
     return (
         <main>
-            <Link to="/">
+            <Link to='/'>
                 <button>Volver</button>
             </Link>
             <article>
                 <img 
-                src={characterSelected.image !== "" ? characterSelected.image : `https://via.placeholder.com/210x295/E5C07B/666666/?text=${characterSelected.name}`} 
+                src={characterSelected.image !== '' ? characterSelected.image : `https://via.placeholder.com/210x295/E5C07B/666666/?text=${characterSelected.name}`} 
                 alt={`character: ${characterSelected.name}`}>
                 </img>
                 <div>

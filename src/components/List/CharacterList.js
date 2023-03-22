@@ -1,4 +1,4 @@
-import CharacterCard from "./CharacterCard"
+import CharacterCard from './CharacterCard'
 
 const CharacterList = ({filteredCharacters}) => {
     const listCharacters = filteredCharacters.map(eachCharacter => {

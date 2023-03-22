@@ -7,12 +7,12 @@ const FilterName = ({handleInputName, nameFilter}) => {
             <legend>
                 Busca por personaje:
             </legend>
-            <label htmlFor="name">
+            <label htmlFor='name'>
                 <input 
-                type="text" 
-                id="name" 
-                name="name"
-                placeholder="ej: Harry Potter"
+                type='text' 
+                id='name' 
+                name='name'
+                placeholder='ej: Harry Potter'
                 value={nameFilter}
                 onChange={handleInput}>
                 </input>
