@@ -1,0 +1,46 @@
+@import '../../core/variables';
+
+.section-character-detail {
+    // background-image: url(../../../images/background-character.jpeg);
+    &-link {
+      &-button {
+        background-color: transparent;
+        color: $color-white;
+      }
+    }
+    &-character {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3rem;
+      &-image {
+        width: 260px;
+        border-radius: 1rem;
+      }
+      &-container {
+        margin-top: 1rem;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &-name {
+            font-family: $font-Harry;
+            font-size: 2rem;
+            letter-spacing: 0.15rem;
+        }
+        &-descritpion {
+            font-family: $font-Inter;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            &-span {
+                &-alive, &-dead {
+                    display: inline
+                }
+            }
+        }
+      }
+    }
+}

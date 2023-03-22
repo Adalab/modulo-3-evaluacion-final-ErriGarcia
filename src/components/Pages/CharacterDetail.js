@@ -1,4 +1,12 @@
+import '../../styles/components/Pages/CharacterDetail.scss'
 import { Link, useParams } from 'react-router-dom'
+import alive from '../../images/alive.svg'
+import dead from '../../images/dead.svg'
+import male from '../../images/male.svg'
+import female from '../../images/female.svg'
+import arrowback from '../../images/arrow-back.svg'
+
+
 
 const CharacterDetail = ({characters}) => {
 
@@ -8,44 +16,45 @@ const CharacterDetail = ({characters}) => {
 
     if(characterSelected !== undefined) {
         return (
-            <section>
-                <Link to='/'>
-                    <button>Volver</button>
+            <section className='section-character-detail'>
+                <Link to='/' className='section-character-detail-link'>
+                    <img className='section-character-detail-link-button' src={arrowback}></img>
                 </Link>
-                <article>
+                <article className='section-character-detail-character'>
                     <img 
                     src={characterSelected.image !== '' ? characterSelected.image : `https://via.placeholder.com/250x320/FFFFFF/666666/?text=${characterSelected.name}`} 
-                    alt={`character: ${characterSelected.name}`}>
+                    alt={`character: ${characterSelected.name}`}
+                    className='section-character-detail-character-image'>
                     </img>
-                    <div>
-                        <h2>{characterSelected.name}</h2>
-                        <p>
+                    <div className='section-character-detail-character-container'>
+                        <h2 className='section-character-detail-character-container-name'>{characterSelected.name}</h2>
+                        <p className='section-character-detail-character-container-descritpion'>
                             Estatus: &nbsp;
-                            <span>
-                                {characterSelected.alive === true ? 'vivo' : 'muerto'}
+                            <span className='section-character-detail-character-container-descritpion-span'>
+                                {characterSelected.alive === true ? <img src={alive} className='section-character-detail-character-container-descritpion-span-alive'></img> : <img src={dead} className='section-character-detail-character-container-descritpion-span-dead'></img>}
                             </span>
                         </p>
-                        <p>
+                        <p className='section-character-detail-character-container-descritpion'>
                             Especie: &nbsp;
-                            <span>
+                            <span className='section-character-detail-character-container-descritpion-span'>
                                 {characterSelected.specie}
                             </span>
                         </p>
-                        <p>
+                        <p className='section-character-detail-character-container-descritpion'>
                             Genero: &nbsp;
-                            <span>
-                                {characterSelected.gender === 'male' ? 'hombre' : 'mujer'}
+                            <span className='section-character-detail-character-container-descritpion-span'>
+                                {characterSelected.gender === 'male' ? <img src={male}></img> : <img src={female}></img>}
                             </span>
                         </p>
-                        <p>
+                        <p className='section-character-detail-character-container-descritpion'>
                             Origen: &nbsp;
-                            <span>
+                            <span className='section-character-detail-character-container-descritpion-span'>
                                 {characterSelected.ancestry}
                             </span>
                         </p>
-                        <p>
+                        <p className='section-character-detail-character-container-descritpion'>
                             Casa: &nbsp;
-                            <span>
+                            <span className='section-character-detail-character-container-descritpion-span'>
                                 {characterSelected.house}
                             </span>
                         </p>

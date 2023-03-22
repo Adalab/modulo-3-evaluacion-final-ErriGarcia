@@ -1,0 +1,15 @@
+@import '../../core/variables';
+
+.error-message {
+    margin: auto;
+    color: $color-white;
+    font-family: $font-Inter;
+    width: 80%;
+    text-align: center;
+    margin-top: 2rem;
+    &-value {
+        color: $color-violet;
+        font-weight: bold;
+        font-family: $font-Bluu-Next;
+    }
+}

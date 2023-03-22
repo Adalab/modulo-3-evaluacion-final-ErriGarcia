@@ -68,13 +68,20 @@ function App() {
 
   return (
     <div className='App'>
-      <Header></Header>
+      <Routes>
+        <Route path='/character/:characterId' 
+            element={
+              <CharacterDetail characters={characters}>
+              </CharacterDetail>
+            }>
+          </Route>
+      </Routes>
       <main>
         <Routes>
-
           <Route path='/' 
             element={
               <>
+                <Header></Header>
                 <Filters
                 handleInputName={handleInputName}
                 nameFilter={nameFilter}
@@ -91,19 +98,9 @@ function App() {
               </>
             }>
           </Route>
-
-          <Route path='/character/:characterId' 
-            element={
-              <CharacterDetail characters={characters}>
-              </CharacterDetail>
-            }>
-          </Route>
-
-          <Route path='*' 
-          element={<Error404></Error404>}>
-          </Route>
-
+          <Route path='*' element={<Error404></Error404>}></Route>
         </Routes>
+        
       </main>
       <Footer></Footer>
     </div>
