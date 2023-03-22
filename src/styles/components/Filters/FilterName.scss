@@ -1,18 +1,34 @@
 @import '../../core/variables';
+@import '../../core/mixins';
 
 .section-search-form-fieldset-name {
     border: none;
     padding: 0;
+    @include tablet {
+        width: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     &-legend {
         margin-bottom: 0.5rem;
         font-size: 1rem;
+        @include tablet {
+            text-align: center;
+        }
     }
     &-label {
+        @include tablet {
+            margin: auto;
+        }
         &-input {
             border-top-left-radius: 0.5rem;
             border-bottom-left-radius: 0.5rem;
             border: none;
             width: 80%;
+            @include tablet {
+                width: 20rem;
+            }
             &::placeholder {
                 padding: 0.25rem;
             }
