@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <footer className='footer'>
-            <p className='footer-text'>Made with ♥ by <Link to='https://github.com/ErriGarcia' className='footer-text-link'>ErriGarcia</Link></p>
+            <p className='footer-text'>Made with ♥ by <Link target='_blank' to='https://github.com/ErriGarcia' className='footer-text-link'>ErriGarcia</Link></p>
         </footer>
     )
 }
