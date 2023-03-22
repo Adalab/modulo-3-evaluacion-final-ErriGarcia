@@ -1,6 +1,8 @@
 const Header = () => {
     return (
-
+        <nav>
+            <img src=""></img>
+        </nav>
     )
 }
 

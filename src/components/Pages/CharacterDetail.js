@@ -6,7 +6,7 @@ const CharacterDetail = ({characters}) => {
     const characterSelected = characters.find(eachCharacter => eachCharacter.id === characterId)
     console.log(characterSelected)
     return (
-        <main>
+        <section>
             <Link to='/'>
                 <button>Volver</button>
             </Link>
@@ -49,7 +49,7 @@ const CharacterDetail = ({characters}) => {
                     </p>
                 </div>
             </article>
-       </main>
+       </section>
     )
 }
 
