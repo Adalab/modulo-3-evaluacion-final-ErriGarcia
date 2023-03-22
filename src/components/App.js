@@ -6,6 +6,7 @@ import Filters from './Filters/Filters'
 import { Route, Routes } from 'react-router'
 import CharacterDetail from './Pages/CharacterDetail'
 import Error404 from './Pages/Error404'
+import Header from './Header'
 
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Header></Header>
       <main>
         <Routes>
 
