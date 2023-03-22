@@ -1,0 +1,16 @@
+@import '../../core/variables';
+
+.footer {
+    padding: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    font-family: $font-Inter;
+    &-text {
+        &-link {
+            color: $color-violet;
+        }
+    }
+}

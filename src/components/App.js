@@ -6,7 +6,8 @@ import Filters from './Filters/Filters'
 import { Route, Routes } from 'react-router'
 import CharacterDetail from './Pages/CharacterDetail'
 import Error404 from './Pages/Error404'
-import Header from './Header'
+import Header from './Pages/Header'
+import Footer from './Pages/Footer'
 
 
 function App() {
@@ -104,6 +105,7 @@ function App() {
 
         </Routes>
       </main>
+      <Footer></Footer>
     </div>
   )
 }
