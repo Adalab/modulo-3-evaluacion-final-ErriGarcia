@@ -35,7 +35,7 @@ function App() {
     .filter(eachCharacter => {
       return eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
     })
-    .sort((a, b) => a.name.localeCompare(b.name))
+    // .sort((a, b) => a.name.localeCompare(b.name))
     .filter(eachCharacter => {
       return genderFilter === 'all' ? true : eachCharacter.gender === genderFilter
     })
@@ -61,6 +61,7 @@ function App() {
   const handleReset = () => {
     setNameFilter('')
     setHouseFilter('Gryffindor')
+    setGenderFilter('all')
   }
 
 

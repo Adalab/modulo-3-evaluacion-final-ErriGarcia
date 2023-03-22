@@ -1,0 +1,13 @@
+@import '../../core/variables';
+
+.section-characters {
+    margin-top: 4rem;
+    &-list {
+        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+}

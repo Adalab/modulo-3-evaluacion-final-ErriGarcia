@@ -1,0 +1,27 @@
+@import '../../core/variables';
+
+.list-character {
+    &-link {
+        text-decoration: none;
+        color: white;
+        &-image {
+            width: 250px;
+            height: 320px;
+            border-top-right-radius: 1rem;
+            border-top-left-radius: 1rem;
+        }
+        &-container {
+            background-color: rgba($color: rgb(107, 99, 181), $alpha: 0.2);
+            padding: 0.5rem 0.5rem 1rem 1rem;
+            border-bottom-right-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            &-name {
+                font-family: $font-Harry;
+                font-size: 2rem;
+            }
+            &-specie {
+                font-family: $font-Inter;
+            }
+        }
+    }
+}

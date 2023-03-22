@@ -1,3 +1,4 @@
+import '../../styles/components/List/CharacterList.scss'
 import ErrorMessage from './ErrorMessage'
 import CharacterCard from './CharacterCard'
 
@@ -13,8 +14,8 @@ const CharacterList = ({filteredCharacters, nameFilter}) => {
         return <CharacterCard eachCharacter={eachCharacter} key={eachCharacter.id}></CharacterCard>
     })
     return (
-        <section>
-            <ul>
+        <section className='section-characters'>
+            <ul className='section-characters-list'>
                 {listCharacters}
             </ul>
         </section>

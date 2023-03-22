@@ -14,7 +14,7 @@ const CharacterDetail = ({characters}) => {
                 </Link>
                 <article>
                     <img 
-                    src={characterSelected.image !== '' ? characterSelected.image : `https://via.placeholder.com/210x295/E5C07B/666666/?text=${characterSelected.name}`} 
+                    src={characterSelected.image !== '' ? characterSelected.image : `https://via.placeholder.com/250x320/FFFFFF/666666/?text=${characterSelected.name}`} 
                     alt={`character: ${characterSelected.name}`}>
                     </img>
                     <div>
