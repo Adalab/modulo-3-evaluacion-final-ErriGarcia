@@ -81,7 +81,8 @@ function App() {
                 handleReset={handleReset}>
                 </Filters>
                 <CharacterList 
-                filteredCharacters={filteredCharacters}>
+                filteredCharacters={filteredCharacters}
+                nameFilter={nameFilter}>
                 </CharacterList>
               </>
             }>
