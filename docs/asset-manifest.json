@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.38bff815.css",
+    "main.js": "./static/js/main.f4331942.js",
+    "static/media/harry-potter-logo.png": "./static/media/harry-potter-logo.96e0a72cfdf19e36de8d.png",
+    "static/media/background-home-mobile.png": "./static/media/background-home-mobile.91d44a8e9a672509641e.png",
+    "static/media/hufflepuff.png": "./static/media/hufflepuff.6ed57d7cc630f39f8f61.png",
+    "static/media/gryffindor.png": "./static/media/gryffindor.a87e7b5b9a002489d2ff.png",
+    "static/media/ravenclaw.png": "./static/media/ravenclaw.5173c1d671c7824935a6.png",
+    "static/media/slytherin.png": "./static/media/slytherin.a82fcd2746f3541d4f34.png",
+    "static/media/default-image.jpg": "./static/media/default-image.fc310cad7a781d0ff850.jpg",
+    "static/media/HARRYP__.TTF": "./static/media/HARRYP__.a65869c0c1a4b3d4fcfc.TTF",
+    "static/media/BluuNext-Bolditalic.otf": "./static/media/BluuNext-Bolditalic.5ea5e9d7b55708917209.otf",
+    "static/media/error-message.png": "./static/media/error-message.35cd5c5f8d64e21687dc.png",
+    "static/media/male.svg": "./static/media/male.de395c449ea4e80b2314123c6545206f.svg",
+    "static/media/alive.svg": "./static/media/alive.e4b6e5fbde0267b62b072e6bd7eedae9.svg",
+    "static/media/female.svg": "./static/media/female.a1ce32fe949bc440de05e63a16167eda.svg",
+    "index.html": "./index.html",
+    "static/media/arrow-back.svg": "./static/media/arrow-back.c38bde8c3bb55630345ab2609e663808.svg",
+    "static/media/dead.svg": "./static/media/dead.0d81eccc749db96d2cb3d443fa570afc.svg",
+    "main.38bff815.css.map": "./static/css/main.38bff815.css.map",
+    "main.f4331942.js.map": "./static/js/main.f4331942.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38bff815.css",
+    "static/js/main.f4331942.js"
+  ]
+}
