@@ -1,10 +1,10 @@
 import '../../styles/components/Pages/CharacterDetail.scss'
 import { Link, useParams } from 'react-router-dom'
-import alive from '../../images/alive.svg'
-import dead from '../../images/dead.svg'
-import male from '../../images/male.svg'
-import female from '../../images/female.svg'
-import arrowback from '../../images/arrow-back.svg'
+import alive from '../../images/icons/alive.svg'
+import dead from '../../images/icons/dead.svg'
+import male from '../../images/icons/male.svg'
+import female from '../../images/icons/female.svg'
+import arrowback from '../../images/icons/arrow-back.svg'
 import Error404 from './Error404'
 
 

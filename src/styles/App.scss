@@ -16,7 +16,7 @@
 .App {
     height: 100%;
     padding: 1.25rem 1.5rem;
-    background-image: url(../images/background-home-mobile.png);
+    background-image: url(../images/backgrounds/background-home-mobile.png);
     @include tablet {
         padding: 1.25rem 2.5rem;
     }

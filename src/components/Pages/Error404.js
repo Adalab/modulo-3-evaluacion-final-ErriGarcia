@@ -1,5 +1,5 @@
 import '../../styles/components/Pages/Error404.scss'
-import error from '../../images/error-message.png'
+import error from '../../images/images/error-message.png'
 import { Link } from 'react-router-dom'
 
 const Error404 = () => {

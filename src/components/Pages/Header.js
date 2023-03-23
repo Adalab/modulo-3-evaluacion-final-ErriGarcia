@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../../images/logo-harry-potter.png'
+import logo from '../../images/logo/logo-harry-potter.png'
 import '../../styles/components/Pages/Header.scss'
 
 const Header = () => {
