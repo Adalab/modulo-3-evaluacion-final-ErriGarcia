@@ -82,6 +82,12 @@ const CharacterDetail = ({characters}) => {
                             </span>
                         </p>
                         <p className='section-character-detail-character-container-descritpion'>
+                            Fecha de nacimiento: &nbsp;
+                            <span className='section-character-detail-character-container-descritpion-span'>
+                                {characterSelected.dateOfBirth ? characterSelected.dateOfBirth : 'not found'}
+                            </span>
+                        </p>
+                        <p className='section-character-detail-character-container-descritpion'>
                             Casa: &nbsp;
                             <Link to='https://harrypotter.fandom.com/wiki/Hogwarts_Houses' target='_blank'>
                                 <img className='section-character-detail-character-container-descritpion-image' src={characterSelectedHouseImage()} alt={`${characterSelected.name} house`}>
