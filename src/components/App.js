@@ -29,15 +29,15 @@ function App() {
   }, [houseFilter])
 
 
-  // filtered characters by name and gender
+  // filtered characters by name and gender and sort alphabetically
   let filteredCharacters = characters
     .filter(eachCharacter => {
       return eachCharacter.name.toLowerCase().includes(nameFilter.toLowerCase())
     })
-    // .sort((a, b) => a.name.localeCompare(b.name))
     .filter(eachCharacter => {
       return genderFilter === 'all' ? true : eachCharacter.gender === genderFilter
     })
+    .sort((a, b) => a.name.localeCompare(b.name))
 
 
   // function to set name searched by user

@@ -2,6 +2,9 @@
 @import '../../core/mixins';
 
 .section-character-detail {
+  @include tablet {
+      height: 80vh;
+  }
     &-link {
       &-image {
         margin-top: 1rem;

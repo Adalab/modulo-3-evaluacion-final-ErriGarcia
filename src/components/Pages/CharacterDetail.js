@@ -11,6 +11,7 @@ import gryffindor from '../../images/images/gryffindor.png'
 import ravenclaw from '../../images/images/ravenclaw.png'
 import slytherin from '../../images/images/slytherin.png'
 import hufflepuff from '../../images/images/hufflepuff.png'
+import defaultImage from '../../images/images/default-image.jpg'
 
 
 const CharacterDetail = ({characters}) => {
@@ -50,7 +51,7 @@ const CharacterDetail = ({characters}) => {
                 </Link>
                 <article className='section-character-detail-character'>
                     <img 
-                    src={characterSelected.image !== '' ? characterSelected.image : `https://via.placeholder.com/250x320/FFFFFF/666666/?text=${characterSelected.name}`} 
+                    src={characterSelected.image !== '' ? characterSelected.image : defaultImage} 
                     alt={`character: ${characterSelected.name}`}
                     className='section-character-detail-character-image'>
                     </img>

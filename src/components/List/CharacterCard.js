@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import '../../styles/components/List/CharacterCard.scss'
+import defaultImage from '../../images/images/default-image.jpg'
 
 const CharacterCard = ({eachCharacter}) => {
 
@@ -7,7 +8,7 @@ const CharacterCard = ({eachCharacter}) => {
         <figure className='list-character'>
             <Link to={`/character/${eachCharacter.id}`} className='list-character-link'>
                 <img 
-                src={eachCharacter.image !== '' ? eachCharacter.image : `https://via.placeholder.com/250x320/FFFFFF/666666/?text=${eachCharacter.name}`} 
+                src={eachCharacter.image !== '' ? eachCharacter.image : defaultImage} 
                 alt={`character: ${eachCharacter.name}`} className='list-character-link-image'
                 />
                 <figcaption className='list-character-link-container'>
