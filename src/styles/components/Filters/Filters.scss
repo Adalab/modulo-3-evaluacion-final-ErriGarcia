@@ -8,8 +8,18 @@
     padding: 1rem;
     border-radius: 12px;
     font-family: $font-Inter;
+    transition: all .3s ease-in;
+    &:hover {
+        background-color: #181f2c;
+        transition: all .3s ease-out;
+    }
     @include tablet {
         padding: 1.5rem;
+    }
+    @include desktop {
+        max-width: 60rem;
+        margin: auto;
+        margin-top: 2.8rem;
     }
     &-form {
         @include tablet {

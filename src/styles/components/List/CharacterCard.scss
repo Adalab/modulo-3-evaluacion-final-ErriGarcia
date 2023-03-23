@@ -1,12 +1,27 @@
 @import '../../core/variables';
+@import '../../core/mixins';
 
 .list-character {
     &:hover {
         transform: scale(1.05);
     }
+    @include tablet {
+        align-self: center;
+        justify-self: center;
+    }
+    @include desktop {
+        display: flex;
+        justify-content: center;
+    }
     &-link {
         text-decoration: none;
         color: white;
+        @include tablet {
+            width: 15rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &-image {
             width: 250px;
             height: 320px;
@@ -19,6 +34,9 @@
             border-bottom-right-radius: 1rem;
             border-bottom-left-radius: 1rem;
             transition: all .3s ease-in;
+            @include tablet {
+                width: 100%;
+            }
             &:hover {
                 background-color: rgba($color: rgb(107, 99, 181), $alpha: 0.6);
                 transition: all .5s ease-out;

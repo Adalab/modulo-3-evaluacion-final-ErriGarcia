@@ -9,6 +9,9 @@
         justify-content: center;
         &-image {
             width: 15rem;
+            @include desktop {
+                width: 24rem;
+            }
         }
     }
 }
@@ -23,6 +26,9 @@
             width: 30rem;
             margin: auto;
             margin-top: 1.8rem;
+        }
+        @include desktop {
+            font-size: 2.5rem;
         }
         &-span {
             color: $color-violet;

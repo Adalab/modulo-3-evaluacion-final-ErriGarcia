@@ -14,5 +14,9 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
         }
+        @include desktop {
+            grid-template-columns: 30rem 30rem 30rem;
+            row-gap: 4.5rem;
+        }
     }
 }

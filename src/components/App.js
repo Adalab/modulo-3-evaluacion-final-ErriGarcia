@@ -66,7 +66,7 @@ function App() {
 
   return (
     <div className='App'>
-      <main>
+      <main className='App-main'>
         <Routes>
           <Route 
             path='/' 

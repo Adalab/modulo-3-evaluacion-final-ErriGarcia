@@ -2,8 +2,7 @@
 
 .section-character-detail {
     &-link {
-      &-button {
-        color: $color-white;
+      &-image {
         margin-top: 1rem;
       }
     }
@@ -38,6 +37,9 @@
                 &-alive, &-dead {
                     display: inline
                 }
+            }
+            &-image {
+              width: 2rem;
             }
         }
       }

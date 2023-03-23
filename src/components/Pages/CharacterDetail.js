@@ -8,6 +8,9 @@ import male from '../../images/icons/male.svg'
 import female from '../../images/icons/female.svg'
 import arrowback from '../../images/icons/arrow-back.svg'
 import gryffindor from '../../images/images/gryffindor.png'
+import ravenclaw from '../../images/images/ravenclaw.png'
+import slytherin from '../../images/images/slytherin.png'
+import hufflepuff from '../../images/images/hufflepuff.png'
 
 
 const CharacterDetail = ({characters}) => {
@@ -22,10 +25,25 @@ const CharacterDetail = ({characters}) => {
      return <Error404></Error404>
     }
 
+    const characterSelectedHouseImage = () => {
+        if (characterSelected.house === 'Gryffindor') {
+            return gryffindor
+        }
+        if (characterSelected.house === 'Ravenclaw') {
+            return ravenclaw
+        }
+        if (characterSelected.house === 'Slytherin') {
+            return slytherin
+        }
+        if (characterSelected.house === 'Hufflepuff') {
+            return hufflepuff
+        }
+    }
+
     return (
         <section className='section-character-detail'>
             <Link to='/' className='section-character-detail-link'>
-                <img className='section-character-detail-link-button' src={arrowback}></img>
+                <img className='section-character-detail-link-image' src={arrowback} alt='arrow-back'></img>
             </Link>
             <article className='section-character-detail-character'>
                 <img 
@@ -38,7 +56,7 @@ const CharacterDetail = ({characters}) => {
                     <p className='section-character-detail-character-container-descritpion'>
                         Estatus: &nbsp;
                         <span className='section-character-detail-character-container-descritpion-span'>
-                            {characterSelected.alive === true ? <img src={alive} className='section-character-detail-character-container-descritpion-span-alive'></img> : <img src={dead} className='section-character-detail-character-container-descritpion-span-dead'></img>}
+                            {characterSelected.alive === true ? <img src={alive} alt='alive' className='section-character-detail-character-container-descritpion-span-alive'></img> : <img src={dead} alt='dead' className='section-character-detail-character-container-descritpion-span-dead'></img>}
                         </span>
                     </p>
                     <p className='section-character-detail-character-container-descritpion'>
@@ -50,7 +68,7 @@ const CharacterDetail = ({characters}) => {
                     <p className='section-character-detail-character-container-descritpion'>
                         Genero: &nbsp;
                         <span className='section-character-detail-character-container-descritpion-span'>
-                            {characterSelected.gender === 'male' ? <img src={male}></img> : <img src={female}></img>}
+                            {characterSelected.gender === 'male' ? <img src={male} alt='male icon'></img> : <img src={female} alt='female icon'></img>}
                         </span>
                     </p>
                     <p className='section-character-detail-character-container-descritpion'>
@@ -61,9 +79,10 @@ const CharacterDetail = ({characters}) => {
                     </p>
                     <p className='section-character-detail-character-container-descritpion'>
                         Casa: &nbsp;
-                        <span className='section-character-detail-character-container-descritpion-image'>
-                            {characterSelected.house}
-                        </span>
+                        <Link to='https://harrypotter.fandom.com/wiki/Hogwarts_Houses' target='_blank'>
+                            <img className='section-character-detail-character-container-descritpion-image' src={characterSelectedHouseImage()} alt={`${characterSelected.name} house`}>
+                        </img>
+                        </Link>
                     </p>
                     <p className='section-character-detail-character-container-descritpion'>
                         Actor: &nbsp;
