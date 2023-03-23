@@ -28,13 +28,13 @@
     width: 25%;
     border-radius: 0.5rem;
     color: #777676;
-    transition: all .5s ease-in;
+    transition: all .3s ease-in;
     @include tablet {
         max-width: 6rem;
     }
     &:hover {
         background-color: $color-violet;
         color: $color-white;
-        transition: all .5s ease-out;
+        transition: all .3s ease-out;
     }
 }

@@ -1,6 +1,9 @@
 @import '../../core/variables';
 
 .list-character {
+    &:hover {
+        transform: scale(1.05);
+    }
     &-link {
         text-decoration: none;
         color: white;
@@ -15,6 +18,11 @@
             padding: 0.5rem 0.5rem 1rem 1rem;
             border-bottom-right-radius: 1rem;
             border-bottom-left-radius: 1rem;
+            transition: all .3s ease-in;
+            &:hover {
+                background-color: rgba($color: rgb(107, 99, 181), $alpha: 0.6);
+                transition: all .5s ease-out;
+            }
             &-name {
                 font-family: $font-Harry;
                 font-size: 2rem;

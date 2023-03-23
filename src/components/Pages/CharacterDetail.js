@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import '../../styles/components/Pages/CharacterDetail.scss'
 import Error404 from './Error404'
+import Loading from './Loading'
 import alive from '../../images/icons/alive.svg'
 import dead from '../../images/icons/dead.svg'
 import male from '../../images/icons/male.svg'
@@ -9,13 +10,12 @@ import arrowback from '../../images/icons/arrow-back.svg'
 import gryffindor from '../../images/images/gryffindor.png'
 
 
-
 const CharacterDetail = ({characters}) => {
     const { characterId } = useParams()
     const characterSelected = characters.find(eachCharacter => eachCharacter.id === characterId)
 
     if(characters.length === 0) {
-        return <div>loading...</div>
+        return <Loading></Loading>
     }
 
     if(!characterSelected) {
