@@ -1,4 +1,5 @@
 @import '../../core/variables';
+@import '../../core/mixins';
 
 .section-character-detail {
     &-link {
@@ -11,7 +12,15 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      max-width: 15rem;
+      margin: auto;
       margin-top: 1.2rem;
+      &:hover {
+        transform: scale(1.05);
+      }
+      @include tablet {
+        margin-top: 2rem;
+      }
       &-image {
         width: 260px;
         border-radius: 1rem;
@@ -43,5 +52,11 @@
             }
         }
       }
+    }
+    .alive {
+      animation: beat .5s infinite alternate;
+    }
+    .dead {
+      animation: fall-down 1s infinite;
     }
 }

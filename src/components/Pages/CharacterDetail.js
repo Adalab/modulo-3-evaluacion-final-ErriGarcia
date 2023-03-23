@@ -21,10 +21,6 @@ const CharacterDetail = ({characters}) => {
         return <Loading></Loading>
     }
 
-    if(!characterSelected) {
-     return <Error404></Error404>
-    }
-
     const characterSelectedHouseImage = () => {
         if (characterSelected.house === 'Gryffindor') {
             return gryffindor
@@ -40,60 +36,68 @@ const CharacterDetail = ({characters}) => {
         }
     }
 
-    return (
-        <section className='section-character-detail'>
-            <Link to='/' className='section-character-detail-link'>
-                <img className='section-character-detail-link-image' src={arrowback} alt='arrow-back'></img>
-            </Link>
-            <article className='section-character-detail-character'>
-                <img 
-                src={characterSelected.image !== '' ? characterSelected.image : `https://via.placeholder.com/250x320/FFFFFF/666666/?text=${characterSelected.name}`} 
-                alt={`character: ${characterSelected.name}`}
-                className='section-character-detail-character-image'>
-                </img>
-                <div className='section-character-detail-character-container'>
-                    <h2 className='section-character-detail-character-container-name'>{characterSelected.name}</h2>
-                    <p className='section-character-detail-character-container-descritpion'>
-                        Estatus: &nbsp;
-                        <span className='section-character-detail-character-container-descritpion-span'>
-                            {characterSelected.alive === true ? <img src={alive} alt='alive' className='section-character-detail-character-container-descritpion-span-alive'></img> : <img src={dead} alt='dead' className='section-character-detail-character-container-descritpion-span-dead'></img>}
-                        </span>
-                    </p>
-                    <p className='section-character-detail-character-container-descritpion'>
-                        Especie: &nbsp;
-                        <span className='section-character-detail-character-container-descritpion-span'>
-                            {characterSelected.specie}
-                        </span>
-                    </p>
-                    <p className='section-character-detail-character-container-descritpion'>
-                        Genero: &nbsp;
-                        <span className='section-character-detail-character-container-descritpion-span'>
-                            {characterSelected.gender === 'male' ? <img src={male} alt='male icon'></img> : <img src={female} alt='female icon'></img>}
-                        </span>
-                    </p>
-                    <p className='section-character-detail-character-container-descritpion'>
-                        Origen: &nbsp;
-                        <span className='section-character-detail-character-container-descritpion-span'>
-                            {characterSelected.ancestry}
-                        </span>
-                    </p>
-                    <p className='section-character-detail-character-container-descritpion'>
-                        Casa: &nbsp;
-                        <Link to='https://harrypotter.fandom.com/wiki/Hogwarts_Houses' target='_blank'>
-                            <img className='section-character-detail-character-container-descritpion-image' src={characterSelectedHouseImage()} alt={`${characterSelected.name} house`}>
-                        </img>
-                        </Link>
-                    </p>
-                    <p className='section-character-detail-character-container-descritpion'>
-                        Actor: &nbsp;
-                        <span className='section-character-detail-character-container-descritpion-span'>
-                            {characterSelected.actor}
-                        </span>
-                    </p>
-                </div>
-            </article>
-        </section>
-    )
+    const addCharacterSelectedStatusClass = () => {
+        return characterSelected.alive ? 'alive' : 'dead'
+    }
+
+    if(!characterSelected) {
+     return <Error404></Error404>
+    } else {
+        return (
+            <section className='section-character-detail'>
+                <Link to='/' className='section-character-detail-link'>
+                    <img className='section-character-detail-link-image' src={arrowback} alt='arrow-back'></img>
+                </Link>
+                <article className='section-character-detail-character'>
+                    <img 
+                    src={characterSelected.image !== '' ? characterSelected.image : `https://via.placeholder.com/250x320/FFFFFF/666666/?text=${characterSelected.name}`} 
+                    alt={`character: ${characterSelected.name}`}
+                    className='section-character-detail-character-image'>
+                    </img>
+                    <div className='section-character-detail-character-container'>
+                        <h2 className='section-character-detail-character-container-name'>{characterSelected.name}</h2>
+                        <p className='section-character-detail-character-container-descritpion'>
+                            Estatus: &nbsp;
+                            <span className={`section-character-detail-character-container-descritpion-span  ${addCharacterSelectedStatusClass()}`}>
+                                {characterSelected.alive ? <img src={alive} alt='alive' className='section-character-detail-character-container-descritpion-span-alive'></img> : <img src={dead} alt='dead' className='section-character-detail-character-container-descritpion-span-dead'></img>}
+                            </span>
+                        </p>
+                        <p className='section-character-detail-character-container-descritpion'>
+                            Especie: &nbsp;
+                            <span className='section-character-detail-character-container-descritpion-span'>
+                                {characterSelected.specie}
+                            </span>
+                        </p>
+                        <p className='section-character-detail-character-container-descritpion'>
+                            Genero: &nbsp;
+                            <span className='section-character-detail-character-container-descritpion-span'>
+                                {characterSelected.gender === 'male' ? <img src={male} alt='male icon'></img> : <img src={female} alt='female icon'></img>}
+                            </span>
+                        </p>
+                        <p className='section-character-detail-character-container-descritpion'>
+                            Origen: &nbsp;
+                            <span className='section-character-detail-character-container-descritpion-span'>
+                                {characterSelected.ancestry ? characterSelected.ancestry : 'not found'}
+                            </span>
+                        </p>
+                        <p className='section-character-detail-character-container-descritpion'>
+                            Casa: &nbsp;
+                            <Link to='https://harrypotter.fandom.com/wiki/Hogwarts_Houses' target='_blank'>
+                                <img className='section-character-detail-character-container-descritpion-image' src={characterSelectedHouseImage()} alt={`${characterSelected.name} house`}>
+                            </img>
+                            </Link>
+                        </p>
+                        <p className='section-character-detail-character-container-descritpion'>
+                            Actor: &nbsp;
+                            <span className='section-character-detail-character-container-descritpion-span'>
+                                {characterSelected.actor}
+                            </span>
+                        </p>
+                    </div>
+                </article>
+            </section>
+        )
+    }
 }
 
 export default CharacterDetail

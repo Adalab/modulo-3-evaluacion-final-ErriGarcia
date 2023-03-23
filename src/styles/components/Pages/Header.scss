@@ -1,5 +1,6 @@
 @import '../../core/variables';
 @import '../../core/mixins';
+@import '../../core/animations';
 
 .header {
     &-nav-header {
@@ -7,10 +8,17 @@
     &-link {
         display: flex;
         justify-content: center;
+        animation-name: bigEntrance;
+        -webkit-animation-name: bigEntrance;
+        animation-duration: 1.6s;
+        -webkit-animation-duration: 1.6s;
+        animation-timing-function: ease-out;
+        -webkit-animation-timing-function: ease-out;
+        visibility: visible !important;
         &-image {
             width: 15rem;
             @include desktop {
-                width: 24rem;
+                width: 28rem;
             }
         }
     }

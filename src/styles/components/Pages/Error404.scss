@@ -1,4 +1,5 @@
 @import '../../core/variables';
+@import '../../core/mixins';
 
 .section-error-404 {
     height: 70vh;
@@ -7,26 +8,44 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    @include tablet {
+        align-items: center;
+    }
     &-image {
         width: 15rem;
+        @include desktop {
+            width: 20rem;
+        }
     }
     &-title {
         margin-top: 2rem;
         font-family: $font-Bluu-Next;
         text-align: left;
+        @include desktop {
+            font-size: 3.5rem;
+        }
     }
     &-text {
         margin-top: 1rem;
         font-family: $font-Inter;
         color: rgb(219, 219, 219);
         font-size: 0.7rem;
+        @include desktop {
+            font-size: 1rem;
+        }
     }
     &-paragraph {
         margin-top: 1rem;
         font-family: $font-Inter;
+        @include desktop {
+            font-size: 1.5rem;
+        }
     }
     &-link {
         font-family: $font-Inter;
         color: $color-violet;
+        @include desktop {
+            font-size: 1.5rem;
+        }
     }
 }
