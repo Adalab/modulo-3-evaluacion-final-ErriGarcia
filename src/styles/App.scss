@@ -19,6 +19,7 @@
     background-image: url(../images/backgrounds/background-home-mobile.png);
     @include tablet {
         padding: 1.25rem 2.5rem;
+        background-image: url(../images/backgrounds/background-home-desktop.jpeg);
     }
     &-main {
         height: 90%;
