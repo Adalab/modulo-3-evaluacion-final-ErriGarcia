@@ -1,11 +1,12 @@
-import '../../styles/components/Pages/CharacterDetail.scss'
 import { Link, useParams } from 'react-router-dom'
+import '../../styles/components/Pages/CharacterDetail.scss'
+import Error404 from './Error404'
 import alive from '../../images/icons/alive.svg'
 import dead from '../../images/icons/dead.svg'
 import male from '../../images/icons/male.svg'
 import female from '../../images/icons/female.svg'
 import arrowback from '../../images/icons/arrow-back.svg'
-import Error404 from './Error404'
+import gryffindor from '../../images/images/gryffindor.png'
 
 
 
@@ -60,8 +61,14 @@ const CharacterDetail = ({characters}) => {
                     </p>
                     <p className='section-character-detail-character-container-descritpion'>
                         Casa: &nbsp;
-                        <span className='section-character-detail-character-container-descritpion-span'>
+                        <span className='section-character-detail-character-container-descritpion-image'>
                             {characterSelected.house}
+                        </span>
+                    </p>
+                    <p className='section-character-detail-character-container-descritpion'>
+                        Actor: &nbsp;
+                        <span className='section-character-detail-character-container-descritpion-span'>
+                            {characterSelected.actor}
                         </span>
                     </p>
                 </div>

@@ -1,7 +1,7 @@
+import '../../styles/components/Filters/Filters.scss'
 import FilterName from './FilterName'
 import FilterHouse from './FilterHouse'
 import FilterGender from './FilterGender'
-import '../../styles/components/Filters/Filters.scss'
 
 const Filters = ({handleInputName, nameFilter, handleSelectHouse, houseFilter, handleInputGender, genderFilter, handleReset}) => {
 

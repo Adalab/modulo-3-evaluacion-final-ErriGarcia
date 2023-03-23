@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import logo from '../../images/logo/logo-harry-potter.png'
 import '../../styles/components/Pages/Header.scss'
+import logo from '../../images/logo/logo-harry-potter.png'
 
 const Header = () => {
     return (

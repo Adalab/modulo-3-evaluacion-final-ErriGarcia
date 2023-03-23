@@ -1,5 +1,5 @@
-import '../../styles/components/List/CharacterCard.scss'
 import { Link } from 'react-router-dom'
+import '../../styles/components/List/CharacterCard.scss'
 
 const CharacterCard = ({eachCharacter}) => {
 

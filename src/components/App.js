@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
-import callToApi from '../services/api'
-import '../styles/App.scss'
-import CharacterList from './List/CharacterList'
-import Filters from './Filters/Filters'
 import { Route, Routes } from 'react-router'
-import CharacterDetail from './Pages/CharacterDetail'
-import Error404 from './Pages/Error404'
+import '../styles/App.scss'
+import callToApi from '../services/api'
 import Header from './Pages/Header'
+import Filters from './Filters/Filters'
+import CharacterList from './List/CharacterList'
+import CharacterDetail from './Pages/CharacterDetail'
 import Footer from './Pages/Footer'
+import Error404 from './Pages/Error404'
 
 
 function App() {
@@ -22,7 +22,6 @@ function App() {
   const [genderFilter, setGenderFilter] = useState('all')
 
 
-  // useEffect
   useEffect(() => {
     callToApi(houseFilter).then((cleanData) => {
       setCharacters(cleanData)
@@ -69,22 +68,25 @@ function App() {
     <div className='App'>
       <main>
         <Routes>
-          <Route path='/' 
+          <Route 
+            path='/' 
             element={
               <>
                 <Header></Header>
+
                 <Filters
-                handleInputName={handleInputName}
-                nameFilter={nameFilter}
-                handleSelectHouse={handleSelectHouse}
-                houseFilter={houseFilter}
-                handleInputGender={handleInputGender}
-                genderFilter={genderFilter}
-                handleReset={handleReset}>
+                  handleInputName={handleInputName}
+                  nameFilter={nameFilter}
+                  handleSelectHouse={handleSelectHouse}
+                  houseFilter={houseFilter}
+                  handleInputGender={handleInputGender}
+                  genderFilter={genderFilter}
+                  handleReset={handleReset}>
                 </Filters>
+
                 <CharacterList 
-                filteredCharacters={filteredCharacters}
-                nameFilter={nameFilter}>
+                  filteredCharacters={filteredCharacters}
+                  nameFilter={nameFilter}>
                 </CharacterList>
               </>
             }>
@@ -94,10 +96,12 @@ function App() {
               element={
                 <CharacterDetail characters={characters}>
                 </CharacterDetail>
-              }
-          >
+              }>
           </Route>
-          <Route path='*' element={<Error404></Error404>}></Route>
+          <Route 
+            path='*' 
+            element={<Error404></Error404>}>
+          </Route>
         </Routes>
         
       </main>

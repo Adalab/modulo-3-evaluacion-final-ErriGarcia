@@ -12,7 +12,8 @@ const callToApi = (houseFilter) => {
                     house: eachCharacter.house,
                     alive: eachCharacter.alive,
                     ancestry: eachCharacter.ancestry,
-                    image: eachCharacter.image
+                    image: eachCharacter.image,
+                    actor: eachCharacter.actor
                 }
             })
             return cleanData
